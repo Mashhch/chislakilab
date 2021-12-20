@@ -26,10 +26,10 @@ x = np.linspace(0, 10, 100)
 y = np.power((x / 10), np.sin(x))
 
 # number_of_knot = int(input('Количество узлов: '))
-number_of_knot = 10
+number_of_knot = 50
 step = 10 / (number_of_knot-1)
 
-x_knots = [x for x in np.arange(0, 10 + step, step) if x <= 10]
+x_knots = [x for x in np.arange(a, b + step, step) if x <= b]
 y_knots = []
 for i in range(len(x_knots)):
     y_knots.append(Function(x_knots[i]))
